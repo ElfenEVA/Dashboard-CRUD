@@ -7,10 +7,10 @@ verificarSesion();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id'];
-    $titulo = $_POST['titulo'];
-    $url = $_POST['url'];
-    $descripcion = $_POST['descripcion'];
-    $categoria = $_POST['categoria'];
+    $titulo = trim($_POST['titulo']);
+    $url = trim($_POST['url']);
+    $descripcion = trim($_POST['descripcion']);
+    $categoria = trim($_POST['categoria']);
     
     if (actualizarInformacion($id, $titulo, $url, $descripcion, $categoria)) {
         header('Location: ../index.php?success=Registro actualizado correctamente');

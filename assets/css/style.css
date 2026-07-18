@@ -12,6 +12,11 @@ body {
     padding: 20px;
     color: var(--text-primary);
 }
+/*===============================*/
+/*AQUI ESTA DEFINIDO LOS COLORES 
+DE LOS TEMAS 
+SI LE MUEVEN SE JODIO TODO */
+/*===============================*/
 
 /*COLORES CLAROS*/
 :root {
@@ -65,7 +70,477 @@ body.dark-mode {
     --btn-danger: #191de6;
     --btn-secondary: #191de6;
 }
+/* Tema Oscuro por Defecto (Azul) */
+body.dark-mode {
+    --bg-body: #0f0f1a;
+    --bg-white: #1a1a2e;
+    --bg-input: #2d2d44;
+    --bg-hover: #2d2d44;
+    --text-primary: #e8e8e8;
+    --text-secondary: #b0b0b0;
+    --text-muted: #8888aa;
+    --border-color: #2d2d44;
+    --shadow-color: rgba(0,0,0,0.5);
+    --btn-primary: #4a6cf7;
+    --btn-primary-hover: #6c8cff;
+    --btn-danger: #dc3545;
+    --btn-danger-hover: #c82333;
+    --btn-secondary: #4a4a6a;
+    --btn-secondary-hover: #5a5a7a;
+}
 
+/* Tema Oscuro - Verde */
+body.theme-dark-green {
+    --bg-body: #0a1a0a;
+    --bg-white: #142814;
+    --bg-input: #1e3a1e;
+    --bg-hover: #1e3a1e;
+    --text-primary: #d4edda;
+    --text-secondary: #8fdfb0;
+    --text-muted: #6a9a7a;
+    --border-color: #1e3a1e;
+    --shadow-color: rgba(0,0,0,0.5);
+    --btn-primary: #2d8a4e;
+    --btn-primary-hover: #3da86a;
+    --btn-danger: #8a2d2d;
+    --btn-danger-hover: #aa3a3a;
+    --btn-secondary: #2a4a3a;
+    --btn-secondary-hover: #3a5a4a;
+}
+
+/* Tema Oscuro - Morado */
+body.theme-dark-purple {
+    --bg-body: #1a0a2e;
+    --bg-white: #2a1a3e;
+    --bg-input: #3a2a4e;
+    --bg-hover: #3a2a4e;
+    --text-primary: #e8d4f0;
+    --text-secondary: #c8a0d8;
+    --text-muted: #9a7aaa;
+    --border-color: #3a2a4e;
+    --shadow-color: rgba(0,0,0,0.5);
+    --btn-primary: #7a3a9a;
+    --btn-primary-hover: #9a4aba;
+    --btn-danger: #8a2d5a;
+    --btn-danger-hover: #aa3a7a;
+    --btn-secondary: #4a2a5a;
+    --btn-secondary-hover: #5a3a6a;
+}
+
+/* Tema Oscuro - Naranja */
+body.theme-dark-orange {
+    --bg-body: #1a0f0a;
+    --bg-white: #2e1a14;
+    --bg-input: #3e2a1e;
+    --bg-hover: #3e2a1e;
+    --text-primary: #f0e0d4;
+    --text-secondary: #d8b8a0;
+    --text-muted: #aa8a7a;
+    --border-color: #3e2a1e;
+    --shadow-color: rgba(0,0,0,0.5);
+    --btn-primary: #d4762a;
+    --btn-primary-hover: #f08a3a;
+    --btn-danger: #8a3a2a;
+    --btn-danger-hover: #aa4a3a;
+    --btn-secondary: #5a3a2a;
+    --btn-secondary-hover: #6a4a3a;
+}
+
+/* Tema Oscuro - Rojo */
+body.theme-dark-red {
+    --bg-body: #1a0a0a;
+    --bg-white: #2e1414;
+    --bg-input: #3e1e1e;
+    --bg-hover: #3e1e1e;
+    --text-primary: #f0d4d4;
+    --text-secondary: #d8a0a0;
+    --text-muted: #aa7a7a;
+    --border-color: #3e1e1e;
+    --shadow-color: rgba(0,0,0,0.5);
+    --btn-primary: #d42a2a;
+    --btn-primary-hover: #f03a3a;
+    --btn-danger: #8a2a2a;
+    --btn-danger-hover: #aa3a3a;
+    --btn-secondary: #5a2a2a;
+    --btn-secondary-hover: #6a3a3a;
+}
+
+/* Tema Oscuro - Azul Claro (Modo Oscuro Suave) */
+body.theme-dark-soft {
+    --bg-body: #12121e;
+    --bg-white: #1e1e32;
+    --bg-input: #2a2a42;
+    --bg-hover: #2a2a42;
+    --text-primary: #d4d4e8;
+    --text-secondary: #a0a0c8;
+    --text-muted: #7a7a9a;
+    --border-color: #2a2a42;
+    --shadow-color: rgba(0,0,0,0.5);
+    --btn-primary: #4a6a9a;
+    --btn-primary-hover: #5a7aaa;
+    --btn-danger: #8a3a3a;
+    --btn-danger-hover: #aa4a4a;
+    --btn-secondary: #3a4a5a;
+    --btn-secondary-hover: #4a5a6a;
+}
+
+/* Tema Oscuro - Amarillo */
+body.theme-dark-yellow {
+    --bg-body: #1a1a0a;
+    --bg-white: #2e2e14;
+    --bg-input: #3e3e1e;
+    --bg-hover: #3e3e1e;
+    --text-primary: #f0f0d4;
+    --text-secondary: #d8d8a0;
+    --text-muted: #aaaa7a;
+    --border-color: #3e3e1e;
+    --shadow-color: rgba(0,0,0,0.5);
+    --btn-primary: #c8c82a;
+    --btn-primary-hover: #e0e03a;
+    --btn-danger: #8a8a2a;
+    --btn-danger-hover: #aaaa3a;
+    --btn-secondary: #5a5a2a;
+    --btn-secondary-hover: #6a6a3a;
+}
+/*===============================*/
+/*AQUI TERMINA LOS TEMAS Y TODO ESE 
+DESMADRE*/
+/*===============================*/
+
+/* ============================================*/
+/* AQUI EMPIEZA EL SELECTOR DE TEMAS DE COLOR */
+/* ============================================*/
+
+/* Contenedor del selector de temas */
+.theme-selector-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Botón de temas */
+.btn-theme-toggle {
+    background: var(--bg-white);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    flex-shrink: 0;
+}
+
+.btn-theme-toggle:hover {
+    transform: scale(1.1);
+    border-color: var(--btn-primary);
+}
+
+/* Dropdown de temas */
+.theme-dropdown {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background: var(--bg-white);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 8px 0;
+    min-width: 180px;
+    box-shadow: 0 10px 40px var(--shadow-color);
+    z-index: 9999;
+    animation: fadeInDown 0.3s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Opción de tema */
+.theme-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.theme-option:hover {
+    background: var(--bg-hover);
+}
+
+.theme-option.active {
+    background: var(--bg-hover);
+}
+
+/* Previsualización de color */
+.theme-color-preview {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.theme-option:hover .theme-color-preview {
+    transform: scale(1.1);
+}
+
+/* Colores de previsualización */
+.preview-default {
+    background: linear-gradient(135deg, #4a6cf7, #764ba2);
+}
+.preview-green {
+    background: linear-gradient(135deg, #2d8a4e, #3da86a);
+}
+.preview-purple {
+    background: linear-gradient(135deg, #7a3a9a, #9a4aba);
+}
+.preview-orange {
+    background: linear-gradient(135deg, #d4762a, #f08a3a);
+}
+.preview-red {
+    background: linear-gradient(135deg, #d42a2a, #f03a3a);
+}
+.preview-soft {
+    background: linear-gradient(135deg, #4a6a9a, #5a7aaa);
+}
+.preview-yellow {
+    background: linear-gradient(135deg, #c8c82a, #e0e03a);
+}
+
+/* Nombre del tema */
+.theme-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+/* Check de selección */
+.theme-check {
+    font-size: 16px;
+    color: var(--btn-primary);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.theme-option.active .theme-check {
+    opacity: 1;
+}
+
+/* Modo oscuro para el selector */
+body.dark-mode .theme-dropdown,
+body.theme-dark-green .theme-dropdown,
+body.theme-dark-purple .theme-dropdown,
+body.theme-dark-orange .theme-dropdown,
+body.theme-dark-red .theme-dropdown,
+body.theme-dark-soft .theme-dropdown,
+body.theme-dark-yellow .theme-dropdown {
+    background: var(--bg-white);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .theme-option,
+body.theme-dark-green .theme-option,
+body.theme-dark-purple .theme-option,
+body.theme-dark-orange .theme-option,
+body.theme-dark-red .theme-option,
+body.theme-dark-soft .theme-option,
+body.theme-dark-yellow .theme-option {
+    color: var(--text-primary);
+}
+
+body.dark-mode .theme-option:hover,
+body.theme-dark-green .theme-option:hover,
+body.theme-dark-purple .theme-option:hover,
+body.theme-dark-orange .theme-option:hover,
+body.theme-dark-red .theme-option:hover,
+body.theme-dark-soft .theme-option:hover,
+body.theme-dark-yellow .theme-option:hover {
+    background: var(--bg-hover);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .theme-dropdown {
+        right: -20px;
+        min-width: 160px;
+    }
+    
+    .btn-theme-toggle {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+    
+    .theme-option {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
+/* ============================================*/
+/* AQUI TERMINA EL SELECTOR DE TEMAS DE COLOR XD*/
+/* ============================================*/
+
+/* ============================================ */
+/* LOGIN - REDUCIR DISTANCIA HEADER-FORMULARIO */
+/* ============================================ */
+
+/* Contenedor principal del login */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: auto !important; /* Cambiar de 100vh a auto */
+    padding-top: 10px !important; /* Reducir espacio superior */
+    padding-bottom: 30px;
+}
+
+/* Header del login - reducir espacio */
+.header-login {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-bottom: none !important;
+    padding: 10px 0 5px 0 !important; /* Reducir padding */
+    margin-bottom: 0 !important;
+}
+
+/* Contenedor centrado del header */
+.header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Reducir espacio entre logo y botones */
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Logo más pequeño */
+.header-center .logo-img {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.header-center .logo-text h1 {
+    font-size: 20px !important;
+    margin: 0 !important;
+}
+
+.header-center .logo-text span {
+    font-size: 11px !important;
+}
+
+/* Contenedor de botones - más compacto */
+.header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 4px 12px; /* Reducir padding */
+    background: var(--bg-white);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+/* Botones más pequeños */
+.header-actions .btn-theme-toggle {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+}
+
+.header-actions #darkModeToggle {
+    font-size: 12px !important;
+    padding: 3px 6px !important;
+}
+
+.header-actions .theme-indicator {
+    width: 10px;
+    height: 10px;
+    bottom: 1px;
+    right: 1px;
+}
+
+/* Caja del formulario - más compacta */
+.auth-box {
+    background: var(--bg-white);
+    padding: 25px 30px !important; /* Reducir padding */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    width: 100%;
+    max-width: 400px;
+    margin-top: 5px !important; /* Reducir espacio superior */
+}
+
+.auth-box h2 {
+    font-size: 22px !important;
+    margin-bottom: 20px !important;
+}
+
+.auth-box .form-group {
+    margin-bottom: 14px !important;
+}
+
+.auth-box input {
+    padding: 10px !important;
+    font-size: 14px !important;
+}
+
+.auth-box .btn {
+    padding: 10px !important;
+    font-size: 14px !important;
+}
+
+.auth-link {
+    margin-top: 14px !important;
+    font-size: 13px !important;
+}
+
+/* Responsive para móviles */
+@media (max-width: 480px) {
+    .auth-box {
+        padding: 20px !important;
+        margin: 10px !important;
+    }
+    
+    .header-center .logo-img {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    
+    .header-center .logo-text h1 {
+        font-size: 18px !important;
+    }
+    
+    .header-actions {
+        padding: 3px 8px;
+        gap: 5px;
+    }
+    
+    .header-actions .btn-theme-toggle {
+        width: 26px;
+        height: 26px;
+        font-size: 12px;
+    }
+    
+    .header-actions #darkModeToggle {
+        font-size: 11px !important;
+        padding: 2px 5px !important;
+    }
+}
 
 /* ESTILOS DE AUTENTICACION (NO MOVERLE XD)*/
 .auth-container {
@@ -584,38 +1059,64 @@ tbody tr:hover {
     flex-wrap: wrap;
 }
 
-/* BOTÓN DE MODO OSCURO */
-.btn-dark-mode {
-    background: var(--bg-white);
-    border: 2px solid var(--border-color);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+/* ============================================ */
+/* BOTÓN DE MODO OSCURO CON TEXTO (OPCIÓN 2) */
+/* ============================================ */
+
+.btn-dark-mode-text {
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: var(--text-primary);
-}
-
-.btn-dark-mode:hover {
-    transform: scale(1.1);
-    border-color: var(--btn-primary);
-}
-
-.btn-dark-mode-auth {
+    gap: 8px;
+    padding: 8px 16px;
     background: var(--bg-white);
     border: 2px solid var(--border-color);
     border-radius: 8px;
-    padding: 8px 16px;
     font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
     cursor: pointer;
     transition: all 0.3s ease;
-    color: var(--text-primary);
-    width: 100%;
-    margin-bottom: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    white-space: nowrap;
+}
+
+.btn-dark-mode-text:hover {
+    border-color: var(--btn-primary);
+    transform: scale(1.02);
+}
+
+.btn-dark-mode-text .icon {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.btn-dark-mode-text:hover .icon {
+    transform: rotate(30deg);
+}
+
+/* Modo oscuro */
+body.dark-mode .btn-dark-mode-text {
+    background: #2d2d44;
+    border-color: #2d2d44;
+    color: #e8e8e8;
+}
+
+/* Modo oscuro activo en el botón */
+.btn-dark-mode-text.active {
+    border-color: var(--btn-primary);
+    box-shadow: 0 0 0 3px rgba(25, 29, 230, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .btn-dark-mode-text {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .btn-dark-mode-text .icon {
+        font-size: 16px;
+    }
 }
 /* ENLACES EN MODO OSCURO */
 a:not(.btn):not(.btn-add):not(.btn-image) {
@@ -729,5 +1230,91 @@ body.dark-mode::-webkit-scrollbar-thumb:hover {
         left: 20px;
         right: 20px;
         max-height: 300px;
+    }
+}
+/* ============================================ */
+/* ESTILOS PARA EL TRADUCTOR translate.js */
+/* ============================================ */
+
+/* Posicionar el selector en la parte inferior derecha */
+#translate {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 9999 !important;
+    background: white !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
+    padding: 8px 14px !important;
+    border: 1px solid #ddd !important;
+    font-family: 'Segoe UI', sans-serif !important;
+}
+
+/* Estilo del selector de idiomas */
+#translate select {
+    background: white !important;
+    color: #333 !important;
+    border: 1px solid #ddd !important;
+    border-radius: 6px !important;
+    padding: 6px 12px !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+    outline: none !important;
+    font-family: 'Segoe UI', sans-serif !important;
+}
+
+#translate select:hover {
+    border-color: #191de6 !important;
+}
+
+#translate select:focus {
+    border-color: #191de6 !important;
+    box-shadow: 0 0 0 3px rgba(25, 29, 230, 0.1) !important;
+}
+
+/* Etiqueta del selector */
+#translate .translate-label {
+    color: #555 !important;
+    font-size: 13px !important;
+    margin-right: 8px !important;
+    font-weight: 500 !important;
+}
+
+/* Modo oscuro */
+body.dark-mode #translate {
+    background: #1a1a2e !important;
+    border-color: #2d2d44 !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
+}
+
+body.dark-mode #translate select {
+    background: #2d2d44 !important;
+    color: #e8e8e8 !important;
+    border-color: #2d2d44 !important;
+}
+
+body.dark-mode #translate .translate-label {
+    color: #b0b0b0 !important;
+}
+
+/* Responsive - Móviles */
+@media (max-width: 768px) {
+    #translate {
+        bottom: 10px !important;
+        right: 10px !important;
+        left: 10px !important;
+        width: auto !important;
+        padding: 6px 10px !important;
+        border-radius: 6px !important;
+    }
+    
+    #translate select {
+        width: 100% !important;
+        font-size: 13px !important;
+        padding: 8px !important;
+    }
+    
+    #translate .translate-label {
+        font-size: 12px !important;
     }
 }

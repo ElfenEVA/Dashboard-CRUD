@@ -24,25 +24,11 @@ if (!empty($termino_busqueda)) {
 </head>
 <body>
     <div class="container">
-        <header>
-    <div class="header-left">
-        <a href="index.php" class="logo">
-            <!-- Logo con imagen -->
-            <img src="assets/img/logo.png" alt="TuxLink Logo" class="logo-img">
-            <div class="logo-text">
-                <h1>TuxLink</h1>
-                <span>Gestión de Información</span>
-            </div>
-        </a>
-    </div>
-    <div class="user-info">
-         <button id="darkModeToggle" class="btn-dark-mode" title="Cambiar modo oscuro">
-          modo oscuro
-        </button>
-        <span><?php echo htmlspecialchars($_SESSION['usuario']); ?></span>
-        <a href="actions/logout_action.php" class="btn btn-danger">Cerrar Sesión</a>
-    </div>
-</header>
+        <!-- index.php - Header con selector de temas -->
+<?php 
+$page_title = 'Gestión de Información';
+include 'includes/header.php'; 
+?>
         
         <?php if (isset($_GET['success'])): ?>
             <div class="alert alert-success"><?php echo htmlspecialchars($_GET['success']); ?></div>
@@ -92,7 +78,7 @@ if (!empty($termino_busqueda)) {
             </div>
         <?php endif; ?>
         
-        <!-- Tabla de registros -->
+  
         <section class="table-section">
             <div class="table-header">
                 <h2>Lista de Registros</h2>
@@ -192,6 +178,7 @@ if (!empty($termino_busqueda)) {
     <script src="assets/js/main.js"></script>
     <script src="assets/js/search.js"></script>
     <script src="assets/js/darkmode.js"></script>
+    <script src="assets/js/themes.js"></script>
     <script src="https://cdn.staticfile.net/translate.js/3.18.66/translate.js"></script>
 <script>
 translate.language.setLocal('chinese_simplified'); //设置本地语种（当前网页的语种）。如果不设置，默认自动识别当前网页显示文字的语种。 可填写如 'english'、'chinese_simplified' 等

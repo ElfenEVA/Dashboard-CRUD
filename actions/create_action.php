@@ -11,12 +11,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $descripcion = trim($_POST['descripcion']);
     $categoria = trim($_POST['categoria']);
     
-    // Validar campos obligatorios
     if (empty($titulo) || empty($url) || empty($categoria)) {
         header('Location: ../pages/create.php?error=Todos los campos son obligatorios');
         exit();
     }
     
+    // Ya no se pasa el usuario_id
     if (crearInformacion($titulo, $url, $descripcion, $categoria)) {
         header('Location: ../index.php?success=Registro creado correctamente');
     } else {

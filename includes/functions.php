@@ -2,14 +2,13 @@
 // includes/functions.php
 require_once __DIR__ . '/../config/database.php';
 
-// Función existente para obtener toda la información
+// OBTENER TODOS LOS REGISTROS (sin filtrar por usuario)
 function obtenerInformacion() {
     $conn = getConnection();
-    $usuario_id = $_SESSION['usuario_id'];
     
-    $sql = "SELECT * FROM informacion WHERE usuario_id = ? ORDER BY fecha_creacion DESC";
+    // Eliminar el filtro WHERE usuario_id = ?
+    $sql = "SELECT * FROM informacion ORDER BY fecha_creacion DESC";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $usuario_id);
     $stmt->execute();
     $result = $stmt->get_result();
     
@@ -24,23 +23,21 @@ function obtenerInformacion() {
     return $datos;
 }
 
-// NUEVA FUNCIÓN: Buscar información
+// BUSCAR REGISTROS (sin filtrar por usuario)
 function buscarInformacion($termino) {
     $conn = getConnection();
-    $usuario_id = $_SESSION['usuario_id'];
     
-    // Buscar en todos los campos relevantes
+    // Eliminar el filtro WHERE usuario_id = ?
     $sql = "SELECT * FROM informacion 
-            WHERE usuario_id = ? 
-            AND (titulo LIKE ? 
+            WHERE titulo LIKE ? 
             OR descripcion LIKE ? 
             OR categoria LIKE ? 
-            OR url LIKE ?)
+            OR url LIKE ?
             ORDER BY fecha_creacion DESC";
     
     $termino_busqueda = "%" . $termino . "%";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("issss", $usuario_id, $termino_busqueda, $termino_busqueda, $termino_busqueda, $termino_busqueda);
+    $stmt->bind_param("ssss", $termino_busqueda, $termino_busqueda, $termino_busqueda, $termino_busqueda);
     $stmt->execute();
     $result = $stmt->get_result();
     
@@ -55,14 +52,14 @@ function buscarInformacion($termino) {
     return $datos;
 }
 
-// El resto de funciones permanecen igual...
+// CREAR REGISTRO (sin asociar a usuario)
 function crearInformacion($titulo, $url, $descripcion, $categoria) {
     $conn = getConnection();
-    $usuario_id = $_SESSION['usuario_id'];
     
-    $sql = "INSERT INTO informacion (titulo, url, descripcion, categoria, usuario_id) VALUES (?, ?, ?, ?, ?)";
+    // Eliminar el campo usuario_id de la inserción
+    $sql = "INSERT INTO informacion (titulo, url, descripcion, categoria) VALUES (?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssi", $titulo, $url, $descripcion, $categoria, $usuario_id);
+    $stmt->bind_param("ssss", $titulo, $url, $descripcion, $categoria);
     
     $resultado = $stmt->execute();
     
@@ -72,13 +69,14 @@ function crearInformacion($titulo, $url, $descripcion, $categoria) {
     return $resultado;
 }
 
+// ACTUALIZAR REGISTRO (sin verificar usuario_id)
 function actualizarInformacion($id, $titulo, $url, $descripcion, $categoria) {
     $conn = getConnection();
-    $usuario_id = $_SESSION['usuario_id'];
     
-    $sql = "UPDATE informacion SET titulo=?, url=?, descripcion=?, categoria=? WHERE id=? AND usuario_id=?";
+    // Eliminar la condición AND usuario_id = ?
+    $sql = "UPDATE informacion SET titulo=?, url=?, descripcion=?, categoria=? WHERE id=?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssii", $titulo, $url, $descripcion, $categoria, $id, $usuario_id);
+    $stmt->bind_param("ssssi", $titulo, $url, $descripcion, $categoria, $id);
     
     $resultado = $stmt->execute();
     
@@ -88,13 +86,14 @@ function actualizarInformacion($id, $titulo, $url, $descripcion, $categoria) {
     return $resultado;
 }
 
+// ELIMINAR REGISTRO (sin verificar usuario_id)
 function eliminarInformacion($id) {
     $conn = getConnection();
-    $usuario_id = $_SESSION['usuario_id'];
     
-    $sql = "DELETE FROM informacion WHERE id=? AND usuario_id=?";
+    // Eliminar la condición AND usuario_id = ?
+    $sql = "DELETE FROM informacion WHERE id=?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ii", $id, $usuario_id);
+    $stmt->bind_param("i", $id);
     
     $resultado = $stmt->execute();
     
@@ -104,13 +103,14 @@ function eliminarInformacion($id) {
     return $resultado;
 }
 
+// OBTENER REGISTRO POR ID (sin verificar usuario_id)
 function obtenerInformacionPorId($id) {
     $conn = getConnection();
-    $usuario_id = $_SESSION['usuario_id'];
     
-    $sql = "SELECT * FROM informacion WHERE id=? AND usuario_id=?";
+    // Eliminar la condición AND usuario_id = ?
+    $sql = "SELECT * FROM informacion WHERE id=?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ii", $id, $usuario_id);
+    $stmt->bind_param("i", $id);
     $stmt->execute();
     $result = $stmt->get_result();
     
